@@ -149,7 +149,7 @@ button {
 }
 
 /* ==========================================================================
-   1. HERO — BACKGROUND FULL-BLEED WITH SOFT FILM OVERLAY
+   1. HERO — BACKGROUND FULL-BLEED WITH SOFT FILM OVERLAY & ASYMMETRIC EDITORIAL ALIGNMENT
    ========================================================================== */
 .hero-fullbleed {
   position: relative;
@@ -157,10 +157,10 @@ button {
   min-height: 100vh;
   min-height: 100svh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-start;
   overflow: hidden;
-  padding: 5.5rem 1.5rem 3rem;
+  padding: 6.5rem 2rem 4rem;
   margin: 0;
 }
 
@@ -176,7 +176,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 22%;
+  object-position: center 25%;
   transform: scale(1.02);
   transition: transform 1.6s var(--ease-spring);
 }
@@ -184,12 +184,19 @@ button {
 .hero-bg-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(16, 12, 10, 0.42) 0%,
-    rgba(16, 12, 10, 0.58) 50%,
-    rgba(16, 12, 10, 0.72) 100%
-  );
+  background: 
+    linear-gradient(
+      90deg,
+      rgba(16, 12, 10, 0.78) 0%,
+      rgba(16, 12, 10, 0.52) 45%,
+      rgba(16, 12, 10, 0.22) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(16, 12, 10, 0.35) 0%,
+      transparent 35%,
+      rgba(16, 12, 10, 0.72) 100%
+    );
   pointer-events: none;
 }
 
@@ -197,15 +204,16 @@ button {
   position: relative;
   z-index: 2;
   width: 100%;
-  text-align: center;
+  text-align: left;
 }
 
 .hero-inner-box {
-  max-width: 780px;
-  margin: 0 auto;
+  max-width: 650px;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .hero-badge-pill {
@@ -223,6 +231,7 @@ button {
   letter-spacing: 0.2em;
   color: var(--accent-amber);
   margin-bottom: 1.2rem;
+  align-self: flex-start;
 }
 
 .pulse-point {
@@ -235,13 +244,14 @@ button {
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-size: clamp(2.6rem, 5.2vw, 4.5rem);
   line-height: 1.06;
   font-weight: 400;
   color: #FAF6F0;
   margin-bottom: 1.1rem;
   letter-spacing: -0.02em;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  text-align: left;
 }
 
 .hero-title em {
@@ -257,12 +267,13 @@ button {
   max-width: 520px;
   margin-bottom: 2rem;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  text-align: left;
 }
 
 .hero-cta-cluster {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.9rem;
   flex-wrap: wrap;
   margin-bottom: 1.8rem;
@@ -314,6 +325,7 @@ button {
   padding-top: 1rem;
   width: 100%;
   max-width: 300px;
+  text-align: left;
 }
 
 /* ==========================================================================
@@ -2058,36 +2070,61 @@ button {
 
   .hero-fullbleed {
     min-height: 94svh;
-    padding: 5rem 1rem 2rem;
+    padding: 5rem 1.1rem 2.4rem;
+    align-items: flex-end;
+    justify-content: flex-start;
   }
 
   .hero-bg-photo {
-    object-position: center 18%;
+    object-position: center 20%;
+  }
+
+  .hero-bg-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(16, 12, 10, 0.22) 0%,
+      rgba(16, 12, 10, 0.48) 45%,
+      rgba(16, 12, 10, 0.88) 100%
+    );
+  }
+
+  .hero-content-layer {
+    text-align: left;
+  }
+
+  .hero-inner-box {
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
   }
 
   .hero-title {
-    font-size: clamp(2.2rem, 8.5vw, 2.8rem);
+    font-size: clamp(2.1rem, 8.2vw, 2.7rem);
     line-height: 1.08;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.75rem;
+    text-align: left;
   }
 
   .hero-subtext {
     font-size: 0.92rem;
     line-height: 1.5;
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
   }
 
   .hero-badge-pill {
     padding: 0.3rem 0.85rem;
     font-size: 0.65rem;
-    margin-bottom: 0.9rem;
+    margin-bottom: 0.85rem;
+    align-self: flex-start;
   }
 
   .hero-cta-cluster {
     flex-direction: column;
     width: 100%;
     gap: 0.75rem;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.3rem;
+    align-items: stretch;
   }
 
   .btn-hero-booking,
@@ -2102,6 +2139,7 @@ button {
   .hero-floating-quote {
     font-size: 0.82rem;
     padding-top: 0.8rem;
+    text-align: left;
   }
 
   .content-container {
