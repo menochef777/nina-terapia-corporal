@@ -15,7 +15,7 @@
   <!-- Favicon SVG -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23784E38' stroke-width='1.5'><circle cx='12' cy='12' r='9'/><path d='M12 7v5l3 3'/></svg>" type="image/svg+xml">
 
-  <!-- Editorial Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -53,7 +53,7 @@
       <!-- Right Action CTA -->
       <div class="nav-cta-wrap">
         <button type="button" class="btn-pill-nav btn-open-booking-modal magnetic-btn" data-source="header">
-          <span>Reservar sesión</span>
+          <span>Reservar</span>
           <span class="nav-arrow">→</span>
         </button>
 
@@ -95,100 +95,70 @@
   <main id="main-content">
 
     <!-- ==========================================
-         01 — HERO (Cinematic Editorial Composition)
+         01 — HERO (FULL-BLEED BACKGROUND WITH SOFT OVERLAY)
          ========================================== -->
-    <section class="hero-cinematic" id="hero">
-      <div class="hero-wrapper">
-        
-        <!-- Left Typography Layer -->
-        <div class="hero-typography-layer">
+    <section class="hero-fullbleed" id="hero">
+      
+      <!-- 100% Background Image & Soft Film Layer -->
+      <div class="hero-bg-media">
+        <img 
+          src="assets/images/hero.jpg" 
+          alt="Nina en sesión de terapia corporal" 
+          class="hero-bg-photo" 
+          id="hero-bg-photo"
+          fetchpriority="high"
+        >
+        <div class="hero-bg-overlay"></div>
+      </div>
+
+      <!-- Hero Centered Editorial Content Layer -->
+      <div class="hero-content-layer">
+        <div class="content-container">
           
-          <div class="hero-label-tag reveal-anim" data-delay="100">
-            <span class="pulse-point"></span>
-            <span class="tag-txt">TERAPIA CORPORAL · PATRAIX, VALENCIA</span>
-          </div>
-
-          <h1 class="hero-headline reveal-anim" data-delay="200">
-            <span class="line-1">Tu cuerpo</span>
-            <span class="line-2">también sabe</span>
-            <span class="line-3"><em>cuándo parar.</em></span>
-          </h1>
-
-          <p class="hero-subline reveal-anim" data-delay="300">
-            Una experiencia de contacto profundo para relajar el cuerpo, calmar la mente y volver a sentirte.
-          </p>
-
-          <!-- Hero Bottom Bar: Meta + CTAs -->
-          <div class="hero-meta-cta-cluster reveal-anim" data-delay="400">
+          <div class="hero-inner-box">
             
-            <div class="hero-spec-badge glare-card">
-              <div class="glare-effect"></div>
-              <span class="spec-time">70 MIN</span>
-              <span class="spec-sep">·</span>
-              <span class="spec-price">40 €</span>
-              <span class="spec-city">Valencia</span>
+            <div class="hero-badge-pill reveal-anim" data-delay="50">
+              <span class="pulse-point"></span>
+              <span>PATRAIX · VALENCIA · ESPACIO PRIVADO</span>
             </div>
 
-            <div class="hero-buttons-row">
-              <button type="button" class="btn-hero-primary btn-open-booking-modal magnetic-btn" data-source="hero">
+            <h1 class="hero-title reveal-anim" data-delay="100">
+              Tu cuerpo también<br>
+              <em>sabe cuándo parar.</em>
+            </h1>
+
+            <p class="hero-subtext reveal-anim" data-delay="150">
+              Una experiencia de contacto profundo para relajar el cuerpo, calmar la mente y volver a sentirte.
+            </p>
+
+            <div class="hero-cta-cluster reveal-anim" data-delay="200">
+              <button type="button" class="btn-hero-booking btn-open-booking-modal magnetic-btn" data-source="hero">
                 <span class="btn-shine-sweep"></span>
-                <span>Reservar sesión</span>
+                <span>Reservar sesión (70 min · 40 €)</span>
                 <span class="cta-arrow">→</span>
               </button>
               
-              <a href="#interactivo" class="btn-hero-secondary magnetic-btn">
-                <span>Descubrir la experiencia</span>
+              <a href="#interactivo" class="btn-hero-discover magnetic-btn">
+                <span>¿Qué necesitas hoy?</span>
                 <span class="down-indicator">↓</span>
               </a>
             </div>
 
-          </div>
-
-        </div>
-
-        <!-- Right / Cinematic Photography Frame with Parallax & Glare -->
-        <div class="hero-photo-layer reveal-anim" data-delay="150">
-          <div class="photo-sculpture glare-card pixel-swap-frame" id="hero-photo-container">
-            <div class="glare-effect"></div>
-            <img 
-              src="assets/images/hero.jpg" 
-              alt="Nina en sesión de terapia corporal con luz tenue y contacto humano" 
-              class="hero-main-photo" 
-              id="hero-photo"
-              width="1200" 
-              height="1500" 
-              fetchpriority="high"
-            >
-            <div class="pixel-swap-overlay"></div>
-            <div class="photo-ambient-vignette"></div>
-            
-            <!-- Floating Editorial Poetry Stamp -->
-            <div class="editorial-floating-stamp">
-              <span class="stamp-word">contacto</span>
-              <span class="stamp-dot">·</span>
-              <span class="stamp-word">ritmo</span>
-              <span class="stamp-dot">·</span>
-              <span class="stamp-word">presencia</span>
+            <div class="hero-floating-quote reveal-anim" data-delay="250">
+              <span>contacto · ritmo · presencia</span>
             </div>
+
           </div>
+
         </div>
-
       </div>
 
-      <!-- Hero Subtle Scroll Down Anchor -->
-      <div class="hero-scroll-indicator">
-        <a href="#interactivo" aria-label="Ir a sección interactiva">
-          <span class="scroll-track">
-            <span class="scroll-ball"></span>
-          </span>
-        </a>
-      </div>
     </section>
 
     <!-- ==========================================
-         04.5 — LOGO LOOP / INFINITE MARQUEE RIBBON
+         LOGO LOOP MARQUEE (COMPACT & SLIM)
          ========================================== -->
-    <div class="logo-loop-section" aria-label="Valores y especialidades de la terapia corporal">
+    <div class="logo-loop-section" aria-label="Especialidades">
       <div class="logo-loop-track" id="logo-loop-track">
         <div class="loop-content">
           <span>✦ TRABAJO FASCIAL PROFUNDO</span>
@@ -196,7 +166,6 @@
           <span>✦ CALMA DEL SISTEMA NERVIOSO</span>
           <span>✦ CALOR, RITMO Y PRESENCIA</span>
           <span>✦ ESPACIO ÍNTIMO EN PATRAIX</span>
-          <span>✦ TÉCNICAS OCCIDENTALES & ORIENTALES</span>
         </div>
         <div class="loop-content" aria-hidden="true">
           <span>✦ TRABAJO FASCIAL PROFUNDO</span>
@@ -204,30 +173,26 @@
           <span>✦ CALMA DEL SISTEMA NERVIOSO</span>
           <span>✦ CALOR, RITMO Y PRESENCIA</span>
           <span>✦ ESPACIO ÍNTIMO EN PATRAIX</span>
-          <span>✦ TÉCNICAS OCCIDENTALES & ORIENTALES</span>
         </div>
       </div>
     </div>
 
     <!-- ==========================================
          02 — SELETOR DE NECESIDAD & RESUMO DINÂMICO
-         "¿Qué necesita tu cuerpo hoy?"
          ========================================== -->
-    <section class="section-interactive" id="interactivo">
+    <section class="section-compact section-interactive" id="interactivo">
       <div class="content-container">
         
-        <!-- Header -->
-        <div class="interactive-lead text-center reveal-anim">
+        <div class="section-lead-header text-center reveal-anim">
           <span class="editorial-kicker">02 · ELECCIÓN INTUITIVA</span>
-          <h2 class="interactive-headline">¿Qué necesita tu cuerpo hoy?</h2>
-          <p class="interactive-subheading">Selecciona la sensación que más resuena contigo en este momento para personalizar tu sesión.</p>
+          <h2 class="section-headline">¿Qué necesita tu cuerpo hoy?</h2>
+          <p class="section-subtext">Selecciona tu prioridad para enfocar tu sesión.</p>
         </div>
 
-        <!-- Typographic Interactive Choices with Glare Hover -->
-        <div class="interactive-choices-sculpture" role="tablist" aria-label="Opciones de necesidad corporal">
+        <!-- 3 Interactive Choices -->
+        <div class="interactive-choices-sculpture" role="tablist">
           
-          <!-- Option 1 -->
-          <button type="button" class="choice-sculpture-item glare-card active" id="tab-soltar" data-choice="soltar" role="tab" aria-selected="true">
+          <button type="button" class="choice-sculpture-item scroll-card glare-card active" id="tab-soltar" data-choice="soltar" role="tab" aria-selected="true">
             <div class="glare-effect"></div>
             <div class="choice-visual-indicator">
               <span class="choice-roman">I</span>
@@ -243,8 +208,7 @@
             </div>
           </button>
 
-          <!-- Option 2 -->
-          <button type="button" class="choice-sculpture-item glare-card" id="tab-desconectar" data-choice="desconectar" role="tab" aria-selected="false">
+          <button type="button" class="choice-sculpture-item scroll-card glare-card" id="tab-desconectar" data-choice="desconectar" role="tab" aria-selected="false">
             <div class="glare-effect"></div>
             <div class="choice-visual-indicator">
               <span class="choice-roman">II</span>
@@ -260,8 +224,7 @@
             </div>
           </button>
 
-          <!-- Option 3 -->
-          <button type="button" class="choice-sculpture-item glare-card" id="tab-reconocer" data-choice="reconocer" role="tab" aria-selected="false">
+          <button type="button" class="choice-sculpture-item scroll-card glare-card" id="tab-reconocer" data-choice="reconocer" role="tab" aria-selected="false">
             <div class="glare-effect"></div>
             <div class="choice-visual-indicator">
               <span class="choice-roman">III</span>
@@ -279,8 +242,8 @@
 
         </div>
 
-        <!-- Dynamic Summary Card: "VOS SELECCIONASTE" with Glare -->
-        <div class="dynamic-summary-frame glare-card reveal-anim" id="recommendation-frame">
+        <!-- Dynamic Summary Card: "VOS SELECCIONASTE" -->
+        <div class="dynamic-summary-frame scroll-card glare-card reveal-anim" id="recommendation-frame">
           <div class="glare-effect"></div>
           
           <div class="summary-top-tag">
@@ -289,14 +252,12 @@
           </div>
 
           <div class="summary-main-grid">
-            
             <div class="summary-details-side">
               <h3 class="summary-heading" id="summary-heading">Una sesión enfocada en soltar tensiones.</h3>
               <p class="summary-description" id="summary-desc">
                 Trabajo específico en las fascias donde más se acumula el estrés cotidiano: trapecios, columna y caderas para liberar rigidez profunda.
               </p>
               
-              <!-- Benefits Pill List -->
               <div class="summary-benefits-list" id="summary-benefits">
                 <span class="benefit-tag">✓ Descompresión fascial profunda</span>
                 <span class="benefit-tag">✓ Liberación en trapecios y cuello</span>
@@ -305,14 +266,12 @@
             </div>
 
             <div class="summary-action-side">
-              
               <div class="summary-price-box">
                 <span class="summary-duration-txt" id="summary-time">70 MIN</span>
                 <div class="summary-rate-wrap">
                   <span class="summary-price-val" id="summary-price">40</span>
                   <span class="summary-curr">€</span>
                 </div>
-                <span class="summary-tax-note">/ sesión en Patraix</span>
               </div>
               
               <button 
@@ -326,7 +285,6 @@
                 <span class="btn-arrow-right">→</span>
               </button>
             </div>
-
           </div>
 
         </div>
@@ -336,75 +294,45 @@
 
     <!-- ==========================================
          03 — SECTION 03: EL MÉTODO
-         Asymmetric Editorial Article Composition
          ========================================== -->
-    <section class="section-method" id="metodo">
+    <section class="section-compact section-method" id="metodo">
       <div class="content-container">
         
         <div class="method-editorial-grid">
           
-          <!-- Text Column -->
           <div class="method-text-column reveal-anim">
-            
-            <div class="method-eyebrow">
-              <span class="eyebrow-num">03</span>
-              <span class="eyebrow-txt">EL MÉTODO</span>
-            </div>
-
-            <h2 class="method-major-headline">
+            <span class="editorial-kicker">03 · EL MÉTODO</span>
+            <h2 class="section-headline">
               ¿Qué es la<br>
               <em>Terapia Corporal?</em>
             </h2>
 
             <p class="method-lead-statement">
-              Una mezcla de técnicas de masaje occidentales y orientales combinada con <strong>trabajo profundo en las fáscias</strong> —las vainas de músculos, órganos y tejidos que están entrelazadas por todo tu cuerpo. Cuando se relajan en un lugar, se relajan otros en la cadena completa.
+              Una mezcla de técnicas de masaje occidentales y orientales combinada con <strong>trabajo profundo en las fáscias</strong>. Cuando se relajan en un lugar, se relajan otros en la cadena completa.
             </p>
 
-            <!-- Visual Token Highlights -->
             <div class="method-pillars-strip">
-              <span class="method-token">TÉCNICAS OCCIDENTALES</span>
-              <span class="method-token">TÉCNICAS ORIENTALES</span>
+              <span class="method-token">TÉCNICAS OCCIDENTALES & ORIENTALES</span>
               <span class="method-token token-accent">FASCIAS</span>
-              <span class="method-token">CONTACTO</span>
-              <span class="method-token">RITMO</span>
-              <span class="method-token">CALOR</span>
+              <span class="method-token">CONTACTO & CALOR</span>
             </div>
-
-            <p class="method-body-paragraph">
-              El proceso tiene un <strong>efecto profundo no solo en el cuerpo sino también en la psique</strong>, gracias al calor, el ritmo, las técnicas y el contacto profundo que permite escuchar y comprender las necesidades reales de tu cuerpo.
-            </p>
 
             <blockquote class="method-sensory-quote glare-card">
               <div class="glare-effect"></div>
-              “Algunos se quedan dormidos, otros entran en meditación profunda, algunos lloran liberando la angustia acumulada. Sales como otra persona: descansada, profundamente relajada y contenta.”
+              “Sales como otra persona: descansada, profundamente relajada y contenta.”
             </blockquote>
-
-            <div class="method-therapist-caption">
-              <div class="caption-line"></div>
-              <span>Nina · Terapeuta Corporal en Patraix, Valencia</span>
-            </div>
-
           </div>
 
-          <!-- Asymmetric Visual Column with Nina's Detail Photo & PixelSwap -->
-          <div class="method-visual-column reveal-anim" data-delay="150">
-            <div class="method-photo-frame glare-card pixel-swap-frame">
+          <div class="method-visual-column reveal-anim" data-delay="100">
+            <div class="method-photo-frame scroll-card glare-card pixel-swap-frame">
               <div class="glare-effect"></div>
               <img 
                 src="assets/images/experience_details.jpg" 
-                alt="Detalle artesanal del contacto en terapia corporal con Nina" 
+                alt="Detalle artesanal del contacto en terapia corporal" 
                 class="method-sculpture-img"
                 loading="lazy"
               >
               <div class="pixel-swap-overlay"></div>
-              <div class="photo-warm-glow"></div>
-            </div>
-
-            <div class="method-caption-card">
-              <span class="card-caption-title">LA CADENA FASCIAL</span>
-              <p class="card-caption-text">
-                Al desanudar la tensión somática en un punto, el sistema nervioso entero responde con alivio y espacio para respirar.
-              </p>
             </div>
           </div>
 
@@ -414,77 +342,52 @@
     </section>
 
     <!-- ==========================================
-         04 — SECTION 04: EL RITUAL
-         MagicBento Cards with Amber Spotlight & Tilt
+         04 — SECTION 04: EL RITUAL (MagicBento Cards)
          ========================================== -->
-    <section class="section-ritual-dark" id="ritual">
+    <section class="section-compact section-ritual-dark" id="ritual">
       <div class="content-container">
         
-        <!-- Header -->
-        <div class="ritual-dark-header reveal-anim">
+        <div class="section-lead-header text-center reveal-anim">
           <span class="ritual-kicker">04 · EL RITUAL</span>
           <h2 class="ritual-headline">
-            Una experiencia<br>
-            <em>para bajar el ritmo.</em>
+            Una experiencia <em>para bajar el ritmo.</em>
           </h2>
-          <p class="ritual-sub">Un espacio donde el tiempo se desacelera para permitir que tu sistema nervioso descanse de verdad.</p>
         </div>
 
-        <!-- 4 MagicBento Progressive Elements -->
         <div class="ritual-elements-grid" id="magic-bento-grid">
           
-          <!-- Element 01 -->
-          <div class="ritual-element-card magic-bento-card glare-card reveal-anim" data-delay="100">
+          <div class="ritual-element-card magic-bento-card scroll-card glare-card reveal-anim" data-delay="50">
             <div class="bento-spotlight"></div>
             <div class="glare-effect"></div>
             <span class="element-index">01</span>
-            <div class="element-content">
-              <h3 class="element-title">LUZ TENUE</h3>
-              <p class="element-desc">Iluminación baja y cálida de tono ámbar que apaga la hiperestimulación visual y relaja la mirada al instante.</p>
-            </div>
+            <h3 class="element-title">LUZ TENUE</h3>
+            <p class="element-desc">Iluminación baja y cálida de tono ámbar para calmar la mirada al instante.</p>
           </div>
 
-          <!-- Element 02 -->
-          <div class="ritual-element-card magic-bento-card glare-card reveal-anim" data-delay="200">
+          <div class="ritual-element-card magic-bento-card scroll-card glare-card reveal-anim" data-delay="100">
             <div class="bento-spotlight"></div>
             <div class="glare-effect"></div>
             <span class="element-index">02</span>
-            <div class="element-content">
-              <h3 class="element-title">MÚSICA & SILENCIO</h3>
-              <p class="element-desc">Frecuencias acústicas suaves y pausas de silencio intencional para escuchar el latido y la respiración.</p>
-            </div>
+            <h3 class="element-title">MÚSICA & SILENCIO</h3>
+            <p class="element-desc">Frecuencias acústicas suaves y silencios intencionales para conectar con tu respiración.</p>
           </div>
 
-          <!-- Element 03 -->
-          <div class="ritual-element-card magic-bento-card glare-card reveal-anim" data-delay="300">
+          <div class="ritual-element-card magic-bento-card scroll-card glare-card reveal-anim" data-delay="150">
             <div class="bento-spotlight"></div>
             <div class="glare-effect"></div>
             <span class="element-index">03</span>
-            <div class="element-content">
-              <h3 class="element-title">RITMO ENVOLVENTE</h3>
-              <p class="element-desc">Maniobras pausadas y profundas que acompañan a tu fisiología hacia el estado parasimpático de recuperación.</p>
-            </div>
+            <h3 class="element-title">RITMO ENVOLVENTE</h3>
+            <p class="element-desc">Maniobras pausadas que guían a tu fisiología hacia la recuperación parasimpática.</p>
           </div>
 
-          <!-- Element 04 -->
-          <div class="ritual-element-card magic-bento-card glare-card reveal-anim" data-delay="400">
+          <div class="ritual-element-card magic-bento-card scroll-card glare-card reveal-anim" data-delay="200">
             <div class="bento-spotlight"></div>
             <div class="glare-effect"></div>
             <span class="element-index">04</span>
-            <div class="element-content">
-              <h3 class="element-title">CONTACTO & ESCUCHA</h3>
-              <p class="element-desc">Tacto consciente que comprende las densidades y resistencias de tus tejidos sin forzarlos jamás.</p>
-            </div>
+            <h3 class="element-title">CONTACTO & ESCUCHA</h3>
+            <p class="element-desc">Tacto consciente que comprende las tensiones de tus tejidos sin forzarlos.</p>
           </div>
 
-        </div>
-
-        <!-- Sensory Atmospheric Banner -->
-        <div class="ritual-footer-banner reveal-anim">
-          <div class="banner-glow-line"></div>
-          <p class="banner-quote-txt">
-            “No es un protocolo genérico; es un ritual humano, sensorial y respetuoso con lo que sientes.”
-          </p>
         </div>
 
       </div>
@@ -492,21 +395,19 @@
 
     <!-- ==========================================
          05 — SECTION 05: SESIONES
-         Editorial Pricing & Time Composition
          ========================================== -->
-    <section class="section-sessions-editorial" id="sesiones">
+    <section class="section-compact section-sessions-editorial" id="sesiones">
       <div class="content-container">
         
-        <div class="sessions-editorial-header text-center reveal-anim">
+        <div class="section-lead-header text-center reveal-anim">
           <span class="editorial-kicker">05 · TARIFAS & DURACIÓN</span>
-          <h2 class="sessions-headline">Elige tu tiempo.</h2>
-          <p class="sessions-subheading">Precios transparentes y dedicación individual en cada encuentro.</p>
+          <h2 class="section-headline">Elige tu tiempo.</h2>
         </div>
 
         <div class="sessions-sculpture-grid">
           
           <!-- Session 1 -->
-          <div class="session-sculpture-card glare-card reveal-anim" data-delay="100" id="session-1">
+          <div class="session-sculpture-card scroll-card glare-card reveal-anim" data-delay="50" id="session-1">
             <div class="glare-effect"></div>
             <div class="session-card-header">
               <span class="session-code">PAQUETE 01</span>
@@ -520,19 +421,12 @@
 
             <h3 class="session-card-title">Cuerpo entero</h3>
             <p class="session-card-focus">
-              Enfoque en las zonas que más lo necesitan y liberación de contracturas prioritarias.
+              Enfoque en las zonas que más lo necesitan y liberación de contracturas agudas.
             </p>
-
-            <ul class="session-card-points">
-              <li>Espalda, cuello y hombros</li>
-              <li>Descompresión muscular focalizada</li>
-              <li>Aceites botánicos templados</li>
-            </ul>
 
             <button 
               type="button" 
               class="btn-session-action btn-open-booking-modal magnetic-btn"
-              data-package="1"
               data-package-name="Paquete 1 (70 min - 40€)"
               data-package-price="40€"
               data-package-time="70 MIN"
@@ -542,10 +436,10 @@
             </button>
           </div>
 
-          <!-- Session 2 (Featured Editorial) -->
-          <div class="session-sculpture-card session-card-heroic glare-card reveal-anim" data-delay="200" id="session-2">
+          <!-- Session 2 (Featured) -->
+          <div class="session-sculpture-card session-card-heroic scroll-card glare-card reveal-anim" data-delay="100" id="session-2">
             <div class="glare-effect"></div>
-            <div class="heroic-ribbon">SESIÓN MÁS RECOMENDADA</div>
+            <div class="heroic-ribbon">MÁS RECOMENDADA</div>
             
             <div class="session-card-header">
               <span class="session-code">PAQUETE 02</span>
@@ -559,20 +453,12 @@
 
             <h3 class="session-card-title">Cuerpo entero — Sesión profunda</h3>
             <p class="session-card-focus">
-              El tiempo óptimo para recorrer toda la cadena de fascias, apaciguar el sistema nervioso y entrar en descanso reparador.
+              El tiempo óptimo para recorrer toda la cadena de fascias y calmar el sistema nervioso.
             </p>
-
-            <ul class="session-card-points">
-              <li>Recorrido integral de pies a cabeza</li>
-              <li>Liberación fascial continua y articulaciones</li>
-              <li>Tiempo extendido de relajación psicosomática</li>
-              <li>Ritmo pausado e inmersivo</li>
-            </ul>
 
             <button 
               type="button" 
               class="btn-session-action btn-action-heroic btn-open-booking-modal magnetic-btn"
-              data-package="2"
               data-package-name="Paquete 2 (1h 40 min - 55€)"
               data-package-price="55€"
               data-package-time="1 H 40 MIN"
@@ -583,7 +469,7 @@
           </div>
 
           <!-- Session 3 -->
-          <div class="session-sculpture-card glare-card reveal-anim" data-delay="300" id="session-3">
+          <div class="session-sculpture-card scroll-card glare-card reveal-anim" data-delay="150" id="session-3">
             <div class="glare-effect"></div>
             <div class="session-card-header">
               <span class="session-code">PAQUETE 03</span>
@@ -595,21 +481,14 @@
               <span class="rate-currency">€</span>
             </div>
 
-            <h3 class="session-card-title">Cuerpo entero — Experiencia completa</h3>
+            <h3 class="session-card-title">Cuerpo entero — Completa</h3>
             <p class="session-card-focus">
-              Inmersión total de máxima profundidad, desconexión del tiempo y renovación somática y emocional completa.
+              Inmersión total de máxima profundidad, desconexión del tiempo y renovación somática.
             </p>
-
-            <ul class="session-card-points">
-              <li>Máxima dedicación y trabajo minucioso</li>
-              <li>Espacio para respiración y desbloqueo emocional</li>
-              <li>Sensación profunda de ligereza corporal absoluta</li>
-            </ul>
 
             <button 
               type="button" 
               class="btn-session-action btn-open-booking-modal magnetic-btn"
-              data-package="3"
               data-package-name="Paquete 3 (2h 30 min - 100€)"
               data-package-price="100€"
               data-package-time="2 H 30 MIN"
@@ -625,23 +504,21 @@
     </section>
 
     <!-- ==========================================
-         06 — GALERÍA EDITORIAL PREMIUM, PIXELSWAP & LIGHTBOX
+         06 — GALERÍA EDITORIAL & LIGHTBOX
          ========================================== -->
-    <section class="section-gallery" id="galeria">
+    <section class="section-compact section-gallery" id="galeria">
       <div class="content-container">
         
-        <div class="gallery-header text-center reveal-anim">
+        <div class="section-lead-header text-center reveal-anim">
           <span class="editorial-kicker">ATMÓSFERA Y DETALLES</span>
-          <h2 class="gallery-headline">El santuario en imágenes.</h2>
-          <p class="gallery-subheading">Calidez, silencio, materiales nobles y el tacto artesanal en cada instante.</p>
+          <h2 class="section-headline">El santuario en imágenes.</h2>
         </div>
 
         <div class="gallery-masonry-grid">
           
-          <!-- Item 1: Hero Ambient -->
-          <figure class="gallery-item gallery-item-large glare-card pixel-swap-frame reveal-anim" data-gallery-index="0" tabindex="0">
+          <figure class="gallery-item gallery-item-large scroll-card glare-card pixel-swap-frame reveal-anim" data-gallery-index="0" tabindex="0">
             <div class="glare-effect"></div>
-            <img src="assets/images/hero.jpg" alt="Presencia e iluminación cálida en sesión de terapia corporal" class="gallery-img" loading="lazy">
+            <img src="assets/images/hero.jpg" alt="Presencia e iluminación cálida" class="gallery-img" loading="lazy">
             <div class="pixel-swap-overlay"></div>
             <figcaption class="gallery-caption">
               <span class="caption-tag">Presencia</span>
@@ -650,10 +527,9 @@
             <div class="gallery-zoom-badge">🔍</div>
           </figure>
 
-          <!-- Item 2: Hands Detail -->
-          <figure class="gallery-item glare-card pixel-swap-frame reveal-anim" data-gallery-index="1" tabindex="0">
+          <figure class="gallery-item scroll-card glare-card pixel-swap-frame reveal-anim" data-gallery-index="1" tabindex="0">
             <div class="glare-effect"></div>
-            <img src="assets/images/experience_details.jpg" alt="Detalle del trabajo manual en fascias" class="gallery-img" loading="lazy">
+            <img src="assets/images/experience_details.jpg" alt="Detalle del trabajo manual" class="gallery-img" loading="lazy">
             <div class="pixel-swap-overlay"></div>
             <figcaption class="gallery-caption">
               <span class="caption-tag">Técnica</span>
@@ -662,10 +538,9 @@
             <div class="gallery-zoom-badge">🔍</div>
           </figure>
 
-          <!-- Item 3: Interior Room -->
-          <figure class="gallery-item glare-card pixel-swap-frame reveal-anim" data-gallery-index="2" tabindex="0">
+          <figure class="gallery-item scroll-card glare-card pixel-swap-frame reveal-anim" data-gallery-index="2" tabindex="0">
             <div class="glare-effect"></div>
-            <img src="assets/images/experience_interior.jpg" alt="Ambiente íntimo con luz tenue en Patraix" class="gallery-img" loading="lazy">
+            <img src="assets/images/experience_interior.jpg" alt="Ambiente íntimo con luz tenue" class="gallery-img" loading="lazy">
             <div class="pixel-swap-overlay"></div>
             <figcaption class="gallery-caption">
               <span class="caption-tag">Espacio</span>
@@ -674,10 +549,9 @@
             <div class="gallery-zoom-badge">🔍</div>
           </figure>
 
-          <!-- Item 4: Deep Tissue Detail -->
-          <figure class="gallery-item glare-card pixel-swap-frame reveal-anim" data-gallery-index="3" tabindex="0">
+          <figure class="gallery-item scroll-card glare-card pixel-swap-frame reveal-anim" data-gallery-index="3" tabindex="0">
             <div class="glare-effect"></div>
-            <img src="assets/images/treatment_01_deep_tissue.jpg" alt="Trabajo focalizado en espalda y hombros" class="gallery-img" loading="lazy">
+            <img src="assets/images/treatment_01_deep_tissue.jpg" alt="Trabajo focalizado en espalda" class="gallery-img" loading="lazy">
             <div class="pixel-swap-overlay"></div>
             <figcaption class="gallery-caption">
               <span class="caption-tag">Relajación</span>
@@ -686,10 +560,9 @@
             <div class="gallery-zoom-badge">🔍</div>
           </figure>
 
-          <!-- Item 5: Classic Bodywork -->
-          <figure class="gallery-item glare-card pixel-swap-frame reveal-anim" data-gallery-index="4" tabindex="0">
+          <figure class="gallery-item scroll-card glare-card pixel-swap-frame reveal-anim" data-gallery-index="4" tabindex="0">
             <div class="glare-effect"></div>
-            <img src="assets/images/treatment_02_classic.jpg" alt="Aceites botánicos templados y ritmo envolvente" class="gallery-img" loading="lazy">
+            <img src="assets/images/treatment_02_classic.jpg" alt="Aceites botánicos templados" class="gallery-img" loading="lazy">
             <div class="pixel-swap-overlay"></div>
             <figcaption class="gallery-caption">
               <span class="caption-tag">Botánica</span>
@@ -698,8 +571,7 @@
             <div class="gallery-zoom-badge">🔍</div>
           </figure>
 
-          <!-- Item 6: Stretching & Lengthening -->
-          <figure class="gallery-item glare-card pixel-swap-frame reveal-anim" data-gallery-index="5" tabindex="0">
+          <figure class="gallery-item scroll-card glare-card pixel-swap-frame reveal-anim" data-gallery-index="5" tabindex="0">
             <div class="glare-effect"></div>
             <img src="assets/images/treatment_06_stretching.jpg" alt="Elongación de cadenas musculares" class="gallery-img" loading="lazy">
             <div class="pixel-swap-overlay"></div>
@@ -716,30 +588,28 @@
     </section>
 
     <!-- ==========================================
-         07 — TESTIMONIOS (CAROUSEL COM MOTION)
+         07 — TESTIMONIOS (CAROUSEL TOUCH SWIPE)
          ========================================== -->
-    <section class="section-testimonials" id="testimonios">
+    <section class="section-compact section-testimonials" id="testimonios">
       <div class="content-container">
         
-        <div class="testimonials-header text-center reveal-anim">
+        <div class="section-lead-header text-center reveal-anim">
           <span class="editorial-kicker">EXPERIENCIAS REALES</span>
-          <h2 class="testimonials-headline">Transformación y descanso.</h2>
-          <p class="testimonials-subheading">Sensaciones compartidas por quienes han confiado en el trabajo corporal de Nina.</p>
+          <h2 class="section-headline">Transformación y descanso.</h2>
         </div>
 
-        <!-- Motion Carousel Container -->
-        <div class="carousel-wrapper reveal-anim" id="testimonials-carousel" aria-roledescription="carousel">
+        <div class="carousel-wrapper reveal-anim" id="testimonials-carousel">
           
           <div class="carousel-viewport">
             <div class="carousel-track" id="carousel-track">
               
               <!-- Slide 1 -->
-              <article class="carousel-slide active" role="group" aria-label="1 de 4">
+              <article class="carousel-slide active">
                 <div class="testimonial-bubble glare-card">
                   <div class="glare-effect"></div>
                   <div class="testi-stars">★★★★★</div>
                   <blockquote class="testi-quote">
-                    “Llegué con una sobrecarga emocional enorme en el pecho y cuello que no se iba con nada convencional. Durante la sesión de fascias sentí cómo algo muy profundo se desbloqueaba; incluso se me escaparon unas lágrimas de puro alivio. Salí sintiéndome ligera, en paz y como una persona totalmente renovada.”
+                    “Llegué con una sobrecarga emocional enorme en el pecho y cuello. Durante la sesión sentí cómo algo muy profundo se desbloqueaba; incluso se me escaparon unas lágrimas de puro alivio. Salí como una persona renovada.”
                   </blockquote>
                   <div class="testi-author-meta">
                     <div class="testi-avatar">E</div>
@@ -752,12 +622,12 @@
               </article>
 
               <!-- Slide 2 -->
-              <article class="carousel-slide" role="group" aria-label="2 de 4">
+              <article class="carousel-slide">
                 <div class="testimonial-bubble glare-card">
                   <div class="glare-effect"></div>
                   <div class="testi-stars">★★★★★</div>
                   <blockquote class="testi-quote">
-                    “El ambiente que crea Nina en Patraix es de un cuidado y respeto absoluto. La música, la calidez y sobre todo la precisión de sus manos trabajando las cadenas de tejido. No es un masaje superficial, es una escucha real del cuerpo. Llevaba meses sin dormir tan plácidamente.”
+                    “El ambiente que crea Nina en Patraix es de un cuidado y respeto absoluto. La música, la calidez y la precisión de sus manos trabajando las fascias. Llevaba meses sin dormir tan plácidamente.”
                   </blockquote>
                   <div class="testi-author-meta">
                     <div class="testi-avatar">M</div>
@@ -770,12 +640,12 @@
               </article>
 
               <!-- Slide 3 -->
-              <article class="carousel-slide" role="group" aria-label="3 de 4">
+              <article class="carousel-slide">
                 <div class="testimonial-bubble glare-card">
                   <div class="glare-effect"></div>
                   <div class="testi-stars">★★★★★</div>
                   <blockquote class="testi-quote">
-                    “La técnica de trabajar las fascias es mágica: relaja una zona de la espalda y de repente sientes cómo se suelta la mandíbula y las piernas. Una sensación de oxitocina y calma que me acompañó durante toda la semana. ¡100% recomendable!”
+                    “La técnica de trabajar las fascias relaja una zona de la espalda y de repente sientes cómo se suelta la mandíbula y las piernas. Una sensación de oxitocina y calma que me acompañó toda la semana.”
                   </blockquote>
                   <div class="testi-author-meta">
                     <div class="testi-avatar">S</div>
@@ -788,12 +658,12 @@
               </article>
 
               <!-- Slide 4 -->
-              <article class="carousel-slide" role="group" aria-label="4 de 4">
+              <article class="carousel-slide">
                 <div class="testimonial-bubble glare-card">
                   <div class="glare-effect"></div>
                   <div class="testi-stars">★★★★★</div>
                   <blockquote class="testi-quote">
-                    “Nina tiene una sensibilidad especial para saber exactamente dónde se acumula la tensión sin necesidad de que hables. El ritmo pausado, la luz cálida y la delicadeza hacen que desconectes del mundo exterior desde el primer minuto.”
+                    “Nina tiene una sensibilidad especial para saber exactamente dónde se acumula la tensión. El ritmo pausado y la delicadeza hacen que desconectes del mundo exterior desde el primer minuto.”
                   </blockquote>
                   <div class="testi-author-meta">
                     <div class="testi-avatar">C</div>
@@ -808,15 +678,11 @@
             </div>
           </div>
 
-          <!-- Carousel Controls -->
+          <!-- Controls -->
           <div class="carousel-controls">
-            <button type="button" class="carousel-btn carousel-prev magnetic-btn" id="carousel-prev" aria-label="Testimonio anterior">
-              <span>←</span>
-            </button>
-            <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="Paginación de testimonios"></div>
-            <button type="button" class="carousel-btn carousel-next magnetic-btn" id="carousel-next" aria-label="Testimonio siguiente">
-              <span>→</span>
-            </button>
+            <button type="button" class="carousel-btn carousel-prev magnetic-btn" id="carousel-prev" aria-label="Anterior">←</button>
+            <div class="carousel-dots" id="carousel-dots"></div>
+            <button type="button" class="carousel-btn carousel-next magnetic-btn" id="carousel-next" aria-label="Siguiente">→</button>
           </div>
 
         </div>
@@ -825,22 +691,22 @@
     </section>
 
     <!-- ==========================================
-         08 — SECTION 08: SPACE, CONTACT & INTERACTIVE MAP
+         08 — SECTION 08: SPACE & INTERACTIVE MAP
          ========================================== -->
-    <section class="section-space-contact" id="espacio">
+    <section class="section-compact section-space-contact" id="espacio">
       <div class="content-container">
         
-        <div class="space-contact-card glare-card reveal-anim">
+        <div class="space-contact-card scroll-card glare-card reveal-anim">
           <div class="glare-effect"></div>
           
           <div class="space-text-block">
             <span class="editorial-kicker">UBICACIÓN Y CITAS</span>
-            <h2 class="space-main-title">Patraix · Valencia</h2>
+            <h2 class="section-headline">Patraix · Valencia</h2>
             
             <div class="space-details-group">
               <p class="space-street">Calle Dr. Pérez Feliu</p>
               <p class="space-privacy">Espacio privado e individual.</p>
-              <p class="space-metro">Metro Jesús / Patraix · Fácil acceso en transporte y aparcamiento</p>
+              <p class="space-metro">Metro Jesús / Patraix · Fácil acceso en transporte</p>
             </div>
 
             <div class="space-whatsapp-box">
@@ -853,13 +719,11 @@
                 <span>Reservar por WhatsApp</span>
                 <span class="btn-arrow-right">→</span>
               </button>
-              <span class="whatsapp-discreet-note">Coordinación directa y personalizada con Nina</span>
             </div>
           </div>
 
-          <!-- Interactive Map Container -->
           <div class="space-map-block">
-            <div id="interactive-patraix-map" class="interactive-map-frame" aria-label="Mapa interactivo de Barrio Patraix, Valencia"></div>
+            <div id="interactive-patraix-map" class="interactive-map-frame" aria-label="Mapa interactivo Patraix"></div>
             <div class="map-overlay-badge">
               <span class="map-pin-circle"></span>
               <span>Barrio Patraix · Calle Dr. Pérez Feliu</span>
@@ -872,20 +736,20 @@
     </section>
 
     <!-- ==========================================
-         FINAL CTA: DARK MONUMENTAL CLOSING (#100C0A)
+         FINAL CTA: DARK MONUMENTAL CLOSING
          ========================================== -->
-    <section class="section-final-monumental">
+    <section class="section-final-compact">
       <div class="content-container text-center">
         
         <div class="final-cta-wrapper reveal-anim">
           <span class="final-small-kicker">PAUSA Y PRESENCIA</span>
           
-          <h2 class="final-huge-headline">
+          <h2 class="final-headline">
             Tu cuerpo también<br>
             <em>necesita parar.</em>
           </h2>
 
-          <p class="final-sub-prompt">
+          <p class="final-subtext">
             Reserva un espacio para ti · 70 MIN · 40 €
           </p>
 
@@ -900,8 +764,6 @@
               <span class="cta-arrow">→</span>
             </button>
           </div>
-
-          <span class="final-location-note">Patraix, Calle Dr. Pérez Feliu · Valencia</span>
         </div>
 
       </div>
@@ -932,7 +794,7 @@
 
       <div class="footer-right-direct">
         <button type="button" class="footer-whatsapp-link btn-open-booking-modal magnetic-btn" data-source="footer">
-          <span>WhatsApp Directo (+1 289 472 2644)</span>
+          <span>WhatsApp (+1 289 472 2644)</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
         </button>
         <a href="https://wa.me/12894722644?text=gostou%20do%20site%20fale%20comigo" target="_blank" rel="noopener noreferrer" class="footer-contact-dev">
@@ -944,10 +806,8 @@
     </div>
   </footer>
 
-  <!-- ==========================================
-       DISCREET FLOATING WHATSAPP ACTION DOT
-       ========================================== -->
-  <aside class="floating-quick-action" aria-label="Contacto flotante WhatsApp">
+  <!-- Floating Sticky WhatsApp Button -->
+  <aside class="floating-quick-action" aria-label="Contacto WhatsApp">
     <button 
       type="button" 
       class="action-dot-pill btn-open-booking-modal magnetic-btn" 
@@ -1021,9 +881,7 @@
     </div>
   </div>
 
-  <!-- ==========================================
-       LIGHTBOX MODAL FOR GALLERY
-       ========================================== -->
+  <!-- Lightbox Modal -->
   <div class="lightbox-overlay" id="gallery-lightbox" aria-hidden="true" role="dialog" aria-label="Visor de imagen">
     <button type="button" class="lightbox-close magnetic-btn" id="lightbox-close" aria-label="Cerrar imagen">✕</button>
     <button type="button" class="lightbox-nav lightbox-prev magnetic-btn" id="lightbox-prev" aria-label="Imagen anterior">←</button>

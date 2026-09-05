@@ -589,7 +589,7 @@ function initBookingModal() {
    10. FRAMER-STYLE SCROLL REVEALS
    ========================================================================== */
 function initFramerScrollReveals() {
-  const elements = document.querySelectorAll('.reveal-anim');
+  const elements = document.querySelectorAll('.reveal-anim, .scroll-card');
   if (!elements.length) return;
 
   const observer = new IntersectionObserver((entries, obs) => {
@@ -604,8 +604,8 @@ function initFramerScrollReveals() {
     });
   }, {
     root: null,
-    rootMargin: '0px 0px -50px 0px',
-    threshold: 0.08
+    rootMargin: '0px 0px -40px 0px',
+    threshold: 0.06
   });
 
   elements.forEach(el => observer.observe(el));
@@ -615,7 +615,7 @@ function initFramerScrollReveals() {
    11. SUBTLE HERO PARALLAX
    ========================================================================== */
 function initHeroParallax() {
-  const heroPhoto = document.getElementById('hero-photo');
+  const heroPhoto = document.getElementById('hero-bg-photo');
   if (!heroPhoto || window.innerWidth < 768) return;
 
   window.addEventListener('scroll', () => {
